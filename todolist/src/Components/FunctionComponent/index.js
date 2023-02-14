@@ -11,13 +11,13 @@ function FilterFunction() {
             }
     ])
 
-    const [filterCondition, setFilterCondition] = useState('status');
+    // const [filterCondition, setFilterCondition] = useState('status');
 
-    const [filteredData, setFilteredData] = useState([]);
+    // const [filteredData, setFilteredData] = useState([]);
 
-    useEffect(() => {
-        setFilteredData(items.filter(item => item[filterCondition] == 'completed'));
-      }, [items, filterCondition]);
+    // useEffect(() => {
+    //     setFilteredData(items.filter(item => item[filterCondition] == 'completed'));
+    //   }, [items, filterCondition]);
 
 
 
