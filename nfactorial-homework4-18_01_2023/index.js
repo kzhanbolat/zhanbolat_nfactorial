@@ -83,10 +83,19 @@ function() {alert("canceled"); }
 
 )
 
- 
+console.log("jumbo"[1])
 
+
+const first = [4,5,6];
+
+const second = [1,2,3];
+const third = [7,8,9];
+
+const newArray = [...second,...first,...third];
+console.log(newArray)
 // let arr = [5,2,1,-10,8];
-
+ let x= 5
+ alert(x++)
  
 
 // arr.sort()

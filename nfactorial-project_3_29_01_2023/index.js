@@ -49,7 +49,7 @@ const articles= document.getElementById("articles");
 //     // articles.innerHTML +=newArticle3;
 // });
 
-
+console.log("jumbo")
 fetch('https://jsonplaceholder.typicode.com/todos')
 .then((response)=>response.json())
 .then(data=>
@@ -126,3 +126,6 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 // </div>`
 
 .catch(e=>console.log(e))
+
+
+console.log("jumbo")

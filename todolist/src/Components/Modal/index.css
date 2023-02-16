@@ -1,0 +1,10 @@
+.Modal_jumbo {
+    width: 268;
+    height: 264;
+    background-color: "#E4E6E7";
+    border-radius: 12;
+    position: absolute;
+    top: 100;
+    z-index: 1;
+    right: "10%";
+}
