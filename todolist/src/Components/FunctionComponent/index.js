@@ -192,7 +192,10 @@ function FilterFunction() {
             </div>
             <input className="m-3 " value={value} required onChange={handleChange}
               style={{ width: 200, height: 100, borderRadius: 12, }} />
-            <button onClick={handleSubmit} className="m-3 ">add Item</button>
+            <button style={{
+              border: "none",
+              background: "black", borderRadius: "20px", padding: "1px 15px 1px 15px", color: "white"
+            }} onClick={handleSubmit} className="m-3 ">Add</button>
           </div>
 
           {/* </form> */}
@@ -222,27 +225,27 @@ function FilterFunction() {
               {item.trash && item.isDone?
                 <Typography >
                   {/* sx={{ p: 2 }} */}
-                  <img className="ml-5" src={del} height="10px" witdh="10px" alt=":" />
+                  <img className="ml-3" src={del} height="10px" witdh="10px" alt=":" />
                   <Button style={{color: "black"}} onClick={(e) => handleDelete(item.id)}>Delete forever</Button>
                   <br />
-                  <img className="ml-5" src={doit} height="10px" witdh="10px" alt=":" />
+                  <img className="ml-3" src={doit} height="10px" witdh="10px" alt=":" />
                   <Button  style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move back To Done</Button>
                 </Typography>
                 :
               item.trash && !item.isDone?
                 <Typography >
                   {/* sx={{ p: 2 }} */}
-                  <img className="ml-5" src={del} height="10px" witdh="10px" alt=":" />
+                  <img className="ml-3" src={del} height="10px" witdh="10px" alt=":" />
                   <Button style={{color: "black"}} onClick={(e) => handleDelete(item.id)}>
                   Delete forever</Button>
                   <br />
-                  <img className="ml-5" src={doit} height="10px" witdh="10px" alt=":" />
+                  <img className="ml-3" src={doit} height="10px" witdh="10px" alt=":" />
                   <Button  style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move back To Do</Button>
                 </Typography>
                 :
                 // sx={{ p: 2 }}
                 <Typography >
-                  <img className="ml-5" src={del} height="10px" witdh="10px" alt=":" />
+                  <img className="ml-3" src={del} height="10px" witdh="10px" alt=":" />
                   <Button   style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move To Trash</Button>
                 </Typography>
               }
