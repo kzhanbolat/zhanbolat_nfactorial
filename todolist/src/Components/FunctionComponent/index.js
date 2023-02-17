@@ -1,6 +1,8 @@
 import './index.css'
 import React, { useState, useEffect } from 'react'
 import img from './images/img.png'
+import del from './images/del.png'
+import doit from './images/doit.png'
 import Modal from '../Modal';
 
 import Popover from '@mui/material/Popover';
@@ -217,14 +219,30 @@ function FilterFunction() {
                 horizontal: 'left',
               }}
             >
-              {item.trash ?
-                <Typography sx={{ p: 2 }}>
+              {item.trash && item.isDone?
+                <Typography >
+                  {/* sx={{ p: 2 }} */}
+                  <img className="ml-5" src={del} height="10px" witdh="10px" alt=":" />
                   <Button style={{color: "black"}} onClick={(e) => handleDelete(item.id)}>Delete forever</Button>
                   <br />
+                  <img className="ml-5" src={doit} height="10px" witdh="10px" alt=":" />
+                  <Button  style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move back To Done</Button>
+                </Typography>
+                :
+              item.trash && !item.isDone?
+                <Typography >
+                  {/* sx={{ p: 2 }} */}
+                  <img className="ml-5" src={del} height="10px" witdh="10px" alt=":" />
+                  <Button style={{color: "black"}} onClick={(e) => handleDelete(item.id)}>
+                  Delete forever</Button>
+                  <br />
+                  <img className="ml-5" src={doit} height="10px" witdh="10px" alt=":" />
                   <Button  style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move back To Do</Button>
                 </Typography>
                 :
-                <Typography sx={{ p: 2 }}>
+                // sx={{ p: 2 }}
+                <Typography >
+                  <img className="ml-5" src={del} height="10px" witdh="10px" alt=":" />
                   <Button   style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move To Trash</Button>
                 </Typography>
               }
