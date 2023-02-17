@@ -163,12 +163,12 @@ function FilterFunction() {
         </div>
         {/* <form onSubmit={handleSubmit}> */}
         <div>
-          <input type='text' value={value} required onChange={handleChange} />
+          {/* <input type='text' value={value} required onChange={handleChange} />
           <button onClick={handleSubmit}
             type="submit" style={{
               border: "none", background: "black",
               borderRadius: "100px", padding: "1px 15px 1px 15px", color: "white"
-            }}>+</button>
+            }}>+</button> */}
           <button onClick={openModal}
             type="submit" style={{
               border: "none", background: "black",
@@ -245,7 +245,7 @@ function FilterFunction() {
 
 
             </span>
-            <button
+            {/* <button
               type="button"
               className="btn btn-outline-success btn-sm float-right"
               onClick={() => handleTrash(item.id)}
@@ -258,7 +258,7 @@ function FilterFunction() {
               onClick={() => handleDelete(item.id)}
             >
               <i className="fa fa-trash-o" />
-            </button>
+            </button> */}
           </li>
         ))}
       </ul>
