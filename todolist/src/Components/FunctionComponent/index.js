@@ -221,11 +221,11 @@ function FilterFunction() {
                 <Typography sx={{ p: 2 }}>
                   <Button style={{color: "black"}} onClick={(e) => handleDelete(item.id)}>Delete forever</Button>
                   <br />
-                  <Button onClick={(e)=>{handleTrash(item.id)}}>Move back To Do</Button>
+                  <Button  style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move back To Do</Button>
                 </Typography>
                 :
                 <Typography sx={{ p: 2 }}>
-                  <Button onClick={(e)=>{handleTrash(item.id)}}>Move To Trash</Button>
+                  <Button   style={{color: "black"}} onClick={(e)=>{handleTrash(item.id)}}>Move To Trash</Button>
                 </Typography>
               }
             </Popover>
