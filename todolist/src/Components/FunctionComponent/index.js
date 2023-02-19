@@ -138,6 +138,17 @@ function FilterFunction() {
         : type === 'Trash' ? item.trash
           : "")
 
+  
+  const titles = [
+    "To do", "Done", "Trash"
+  ]
+  const filteredItems1 = titles.filter(title =>
+    type === 'Todo' ? "asd"
+      : type === 'Done' ? "Done"
+        : type === 'Trash' ? "Trash"
+          : ""
+          )
+
   return (
     <div>
       <div className="m-5 d-flex justify-content-between">
@@ -215,7 +226,7 @@ function FilterFunction() {
           <li key={item.id} className="list-group-item d-flex align-items-center ">
             
             <img className="ml-5 m-2 " src={img} height="10px" witdh="10px" alt=":" onClick={handleClick} />
-            <input className="m-2 todo-checkbox" type="checkbox" onClick={() => handleDone(item.id)}/> 
+            <input className="m-2" type="checkbox" checked = {item.isDone} onClick={() => handleDone(item.id) }/> 
             {/* <Button aria-describedby={id} variant="outlined" onClick={handleClick}>
             </Button> */}
             <Popover
