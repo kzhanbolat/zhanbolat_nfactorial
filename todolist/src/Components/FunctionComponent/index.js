@@ -228,7 +228,7 @@ function FilterFunction() {
           
           <li key={item.id} className="list-group-item d-flex align-items-center ">
             
-            <img className="ml-5 m-2 " src={img} height="10px" witdh="10px" alt=":" onClick={handleClick} />
+            <img className="ml-4 pl-2 pr-2" src={img} height="10px" witdh="10px" alt=":" onClick={handleClick} />
             <input className="m-2" type="checkbox" checked = {item.isDone} onClick={() => handleDone(item.id) }/> 
             {/* <Button aria-describedby={id} variant="outlined" onClick={handleClick}>
             </Button> */}
