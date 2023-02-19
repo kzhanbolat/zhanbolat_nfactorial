@@ -17,7 +17,8 @@ function FilterFunction() {
       content: "work every day",
       status: "started",
       isDone: false,
-      trash: false
+      trash: false,
+      checked: false
     }
   ]);
 
@@ -53,16 +54,18 @@ function FilterFunction() {
       content: value,
       status: "started",
       isDone: false,
-      trash: false
+      trash: false,
+      checked: false
     }
     setItem([...items, newItem])
+    setValue("")
   }
 
   const handleDone = (keyFromButton) => {
     const index = items.findIndex(item => item.id === keyFromButton)
     const oldObject = items[index]
     console.log(oldObject)
-    const newObject = { ...oldObject, isDone: !oldObject.isDone }
+    const newObject = { ...oldObject, isDone: !oldObject.isDone, checked : !oldObject.checked }
     console.log(newObject)
     const leftPart = items.slice(0, index)
     const rightPart = items.slice(index + 1, items.length)
@@ -191,25 +194,28 @@ function FilterFunction() {
               Add New To Do
             </div>
             <input className="m-3 " value={value} required onChange={handleChange}
-              style={{ width: 200, height: 100, borderRadius: 12, }} />
+              style={{ width: 200, height: 100, borderRadius: 12}} placeholder="input your text
+              "/>
             <button style={{
               border: "none",
               background: "black", borderRadius: "20px", padding: "1px 15px 1px 15px", color: "white"
-            }} onClick={handleSubmit} className="m-3 ">Add</button>
+            }} onClick={handleSubmit}  className="m-3 ">Add</button>
           </div>
 
           {/* </form> */}
         </div>
 
       </div>
-      <h4 className="m-5">To Do</h4>
+      <h4 className="m-5">To Do List</h4>
       <div className="linedivider m-5 mr-5"></div>
       {/* <div className="m-5">{resourseType}</div> */}
       <ul className="list-group todo-list ">
         {filteredItems.map((item) => (
-          <li key={item.id} className="list-group-item ">
-            <img className="ml-5" src={img} height="10px" witdh="10px" alt=":" />
-            <input className="m-2" type="checkbox" onChange={handleClick} /> 
+          
+          <li key={item.id} className="list-group-item d-flex align-items-center ">
+            
+            <img className="ml-5 m-2 " src={img} height="10px" witdh="10px" alt=":" onClick={handleClick} />
+            <input className="m-2 todo-checkbox" type="checkbox" onClick={() => handleDone(item.id)}/> 
             {/* <Button aria-describedby={id} variant="outlined" onClick={handleClick}>
             </Button> */}
             <Popover
