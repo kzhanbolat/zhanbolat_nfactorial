@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import img from './images/img.png'
 import del from './images/del.png'
 import doit from './images/doit.png'
+import button from './images/button.png'
 import Modal from '../Modal';
 
 import Popover from '@mui/material/Popover';
@@ -171,7 +172,7 @@ function FilterFunction() {
             Done</button>
           <button key="Trash"
             type="button"
-            className={`btn btn${"Trash" === type ? "" : "-outline"}-info m-2`}
+            className={`btn btn${"Trash" === type ? "" : "-outline"}-info`}
             onClick={() => handleStatus("Trash")}
             style={{
               border: "none", background: "grey",
@@ -186,11 +187,12 @@ function FilterFunction() {
               border: "none", background: "black",
               borderRadius: "100px", padding: "1px 15px 1px 15px", color: "white"
             }}>+</button> */}
-          <button onClick={openModal}
-            type="submit" style={{
-              border: "none", background: "black",
-              borderRadius: "100px", padding: "1px 15px 1px 15px", color: "white"
-            }}>+</button>
+          <img src={button} onClick={openModal}
+            // type="submit" style={{
+            //   border: "none", background: "black",
+            //   borderRadius: "100px", padding: "1px 15px 1px 15px", color: "white"
+            // }}
+            />
           {/* {isModal && <Modal onClick={openModal} value={value} onChange={handleChange} />} */}
           <div hidden={!isModal} style={{
             width: 268,
