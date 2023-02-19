@@ -24,7 +24,7 @@ function FilterFunction() {
 
   const [value, setValue] = useState("")
   const [type, setType] = useState("");
-  const [trash, setTrash] = useState([]);
+  const [trash, setTrash] = useState("To Do List");
   const [isModal, setIsModal] = useState(false);
 
   const openModal = () => {
@@ -130,6 +130,7 @@ function FilterFunction() {
 
   const handleStatus = (typeFromButton) => {
     setType(typeFromButton)
+    setTrash(typeFromButton)
   }
 
   const filteredItems = items.filter(item =>
@@ -143,7 +144,7 @@ function FilterFunction() {
     "To do", "Done", "Trash"
   ]
   const filteredItems1 = titles.filter(title =>
-    type === 'Todo' ? "asd"
+    type === 'Todo' ? ""
       : type === 'Done' ? "Done"
         : type === 'Trash' ? "Trash"
           : ""
@@ -156,7 +157,7 @@ function FilterFunction() {
           <button key="Todo"
             type="button"
             className={`btn btn${"Todo" === type ? "" : "-outline"}-info`}
-            onClick={() => handleStatus("Todo")}
+            onClick={() => handleStatus("Todo") }
             style={{ border: "none", background: "grey", borderRadius: "20px", padding: "1px 15px 1px 15px", color: "white" }}
           >To Do</button>
           <button key="Done"
@@ -217,7 +218,7 @@ function FilterFunction() {
         </div>
 
       </div>
-      <h4 className="m-5">To Do List</h4>
+      <h4 className="m-5">{trash}</h4>
       <div className="linedivider m-5 mr-5"></div>
       {/* <div className="m-5">{resourseType}</div> */}
       <ul className="list-group todo-list ">
