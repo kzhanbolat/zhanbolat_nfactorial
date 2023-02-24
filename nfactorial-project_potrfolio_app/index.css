@@ -1,0 +1,68 @@
+.body {
+    background-color: #f1f1f1;
+    width: 80%;
+    margin: auto;
+}
+.header {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav_bar p {
+    margin-right: 5px;
+}
+
+.button_cv {
+    background-color: orange;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    border: none;
+
+}
+.chechbox {
+    display: flex;
+}
+
+.main_checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px;
+    
+    
+}
+.about_me img {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about_me {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    background-color: azure;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.row p {
+    margin-right: 50px;
+}
