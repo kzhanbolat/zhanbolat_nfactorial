@@ -2,15 +2,31 @@
     background-color: rgb(237, 236, 236);
     width: 80%;
     margin: auto;
+    padding-top: 50px;
+}
+
+.topheader {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(210, 209, 209);
+    
+    padding: 10px;
 }
 .header {
     display: flex;
-    margin-top: 50px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     
+    /* margin-top: 10px; */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: Black;
+    /* position: fixed; */
 }
+
+
 
 .nav_bar {
     display: flex;
@@ -20,6 +36,10 @@
 
 .nav_bar p {
     margin-right: 5px;
+}
+
+.content {
+    margin-top: 50px;
 }
 
 .button_cv {

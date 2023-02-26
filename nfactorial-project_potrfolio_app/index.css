@@ -1,15 +1,32 @@
 .body {
-    background-color: #f1f1f1;
+    background-color: rgb(237, 236, 236);
     width: 80%;
     margin: auto;
+    padding-top: 50px;
+}
+
+.topheader {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(210, 209, 209);
+    
+    padding: 10px;
 }
 .header {
     display: flex;
-    margin-top: 50px;
+    
+    /* margin-top: 10px; */
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    color: Black;
+    /* position: fixed; */
 }
+
+
 
 .nav_bar {
     display: flex;
@@ -19,6 +36,10 @@
 
 .nav_bar p {
     margin-right: 5px;
+}
+
+.content {
+    margin-top: 50px;
 }
 
 .button_cv {
@@ -38,7 +59,7 @@
 .main_checkbox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-right: 20px;
     
     
@@ -62,7 +83,34 @@
 .row {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .row p {
     margin-right: 50px;
+}
+.row img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.Project {
+    width: 40%
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.contactMe {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contactMe button a {
+    margin-right: 10;
+    color: white;
 }
