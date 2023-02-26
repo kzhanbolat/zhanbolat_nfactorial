@@ -1,0 +1,96 @@
+.body {
+    background-color: rgb(237, 236, 236);
+    width: 80%;
+    margin: auto;
+}
+.header {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav_bar p {
+    margin-right: 5px;
+}
+
+.button_cv {
+    background-color: orange;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    border: none;
+
+}
+.chechbox {
+    display: flex;
+}
+
+.main_checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 20px;
+    
+    
+}
+.about_me img {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about_me {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    background-color: azure;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.row p {
+    margin-right: 50px;
+}
+.row img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.Project {
+    width: 40%
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.contactMe {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contactMe button a {
+    margin-right: 10;
+    color: white;
+}
